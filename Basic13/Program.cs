@@ -11,6 +11,7 @@
             }
         }
 
+        //Method that print odd number from 1 to 255
         static void printOddNum1To255()
         {
             for (int j = 1; j <= 255; j+=2)
@@ -18,10 +19,22 @@
                 Console.WriteLine(j);
             }
         }
+
+        //Print Sum
+        static void printSum()
+        {
+            int sum = 0;
+            for (int i = 0; i < 256; i++)
+            {
+                sum += i;
+                Console.WriteLine("$New number: {0} Sum: {1}", i, sum);
+            }
+        }
         public static void Main()
         {
-            print1To255();
-            printOddNum1To255();
+            //print1To255();
+            //printOddNum1To255();
+            printSum();
         }
     }
 }
