@@ -30,11 +30,24 @@
                 Console.WriteLine("$New number: {0} Sum: {1}", i, sum);
             }
         }
+
+        //Iterate through array
+        static void printAllItemsInArray(int[] arr)
+        {
+            foreach(int i in arr)
+            {
+                System.Console.Write("{0} ", i);
+            }    
+        }
+        
         public static void Main()
         {
             //print1To255();
             //printOddNum1To255();
-            printSum();
+            //printSum();
+
+            int[] arrOne = { 1, 3, 5, 7, 9, 13 };
+            printAllItemsInArray(arrOne);
         }
     }
 }
