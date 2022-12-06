@@ -1,4 +1,6 @@
-﻿namespace Basic13
+﻿using System.Collections;
+
+namespace Basic13
 {
     public class Program
     {
@@ -71,6 +73,18 @@
 
             return Math.Round(sum / arr.Length, 2);
         }
+
+        static ArrayList getOddNumbers1To255()
+        {
+            ArrayList oddNumerList = new ArrayList();
+            for (int i = 1 ; i < 256 ; i+= 2)
+            {
+                oddNumerList.Add(i);
+            }
+
+            return oddNumerList;
+
+        }
         public static void Main()
         {
             //print1To255();
@@ -85,9 +99,13 @@
             //Console.WriteLine(getMax(arrOne));
             //Console.WriteLine(getMax(arrTwo));
             //Console.WriteLine(getMax(arrThree));
-            Console.WriteLine(getAvg(arrfour));
-            Console.WriteLine(getAvg(arrTwo));
-            Console.WriteLine(getAvg(arrThree));
+            //Console.WriteLine(getAvg(arrfour));
+            //Console.WriteLine(getAvg(arrTwo));
+            //Console.WriteLine(getAvg(arrThree));
+            foreach (int i in getOddNumbers1To255())
+            {
+                System.Console.WriteLine(i);
+            }
         }
     }
 }
