@@ -121,6 +121,25 @@ namespace Basic13
 
             return nums;
         }
+
+        static void getMinMaxAvg(int[] nums)
+        {
+            if (nums.Length == 0)
+            {
+                Console.WriteLine("$Min: 0, Max: 0, Average: 0");
+            }
+            int min = nums[0];
+            for (int i = 1; i < nums.Length; i++)
+            {
+                if (nums[i] < min)
+                {
+                    min = nums[i];
+                }
+            }
+
+            Console.WriteLine("$Min: {0}, Max: {1}, Average: {2}\n", min, getMax(nums), getAvg(nums));
+
+        }
         public static void Main()
         {
             //print1To255();
@@ -152,9 +171,10 @@ namespace Basic13
             //printAllItemsInArray(squaresAllValues(arrThree));
             //printAllItemsInArray(squaresAllValues(arrfour));
 
-            printAllItemsInArray(eliminateNegativeValues(arrThree));
-            printAllItemsInArray(eliminateNegativeValues(arrFive));
+            //printAllItemsInArray(eliminateNegativeValues(arrThree));
+            //printAllItemsInArray(eliminateNegativeValues(arrFive));
 
+            getMinMaxAvg(arrFive);
         }
     }
 }
