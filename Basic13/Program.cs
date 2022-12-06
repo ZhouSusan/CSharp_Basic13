@@ -85,6 +85,19 @@ namespace Basic13
             return oddNumerList;
 
         }
+
+        static ArrayList greaterThanY(int[] arr, int target)
+        {
+            ArrayList fiterArray = new ArrayList();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] > target)
+                {
+                    fiterArray.Add(arr[i]);
+                }
+            }
+            return fiterArray;
+        }
         public static void Main()
         {
             //print1To255();
@@ -106,6 +119,11 @@ namespace Basic13
             {
                 System.Console.WriteLine(i);
             }
+
+            foreach (int j in greaterThanY(arrOne, 5))
+                {
+                System.Console.WriteLine(j);
+                }
         }
     }
 }
