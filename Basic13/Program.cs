@@ -63,6 +63,8 @@ namespace Basic13
             return max;
         }
 
+
+        //Find Average 
         static double getAvg(int[] arr)
         {
             double sum = 0;
@@ -74,6 +76,7 @@ namespace Basic13
             return Math.Round(sum / arr.Length, 2);
         }
 
+        //Return an ArrayList with only odd numbers from 1 to 255
         static ArrayList getOddNumbers1To255()
         {
             ArrayList oddNumerList = new ArrayList();
@@ -86,6 +89,7 @@ namespace Basic13
 
         }
 
+        //Filter out any number value that is greater than target's value 
         static ArrayList greaterThanY(int[] arr, int target)
         {
             ArrayList fiterArray = new ArrayList();
@@ -99,6 +103,7 @@ namespace Basic13
             return fiterArray;
         }
 
+        //Square and return all values in array
         static int[] squaresAllValues(int[] arr)
         {
             for (int i = 0; i < arr.Length; i++)
@@ -109,6 +114,7 @@ namespace Basic13
             return arr;
         }
 
+        //Replace and return any negative values in an array with an zero
         static int[] eliminateNegativeValues(int[] nums)
         {
             for (int x = 0; x < nums.Length; x++)
@@ -122,6 +128,7 @@ namespace Basic13
             return nums;
         }
 
+        //Print out min, max and average values from an array
         static void getMinMaxAvg(int[] nums)
         {
             if (nums.Length == 0)
@@ -141,6 +148,7 @@ namespace Basic13
 
         }
 
+        //Shift all elements within an array by one, and replace last value with a zero. 
         static int[] shiftingValuesInArray(int[] arr)
         {
             int s = 0;
@@ -153,8 +161,9 @@ namespace Basic13
             }
             arr[arr.Length - 1] = 0;
             return arr;
-        } 
+        }
 
+        //Program that takes an array of numbers and replaces any negative number with the string 'Dojo'.
         static ArrayList numToString(int[] numsArr)
         {
             ArrayList numString = new ArrayList();
@@ -173,9 +182,17 @@ namespace Basic13
         }
         public static void Main()
         {
-            //print1To255();
-            //printOddNum1To255();
-            //printSum();
+            Console.WriteLine("Print 1-255\n");
+            print1To255();
+            Console.WriteLine("***********************************\n");
+
+            Console.WriteLine("Print odd numbers between 1-255\n");
+            printOddNum1To255();
+            Console.WriteLine("***********************************\n");
+
+            Console.WriteLine("Print Sum \n");
+            printSum();
+            Console.WriteLine("***********************************\n");
 
             int[] arrOne = { 1, 3, 5, 7, 9, 13 };
             int[] arrTwo = { -3, -5, -7 };
@@ -185,33 +202,55 @@ namespace Basic13
             int[] arrSix = { 1, 5, 10, -7, -2 };
             int[] arrSeven = { -1, -3, 2 };
 
-            //printAllItemsInArray(arrOne);
-            //Console.WriteLine(getMax(arrOne));
-            //Console.WriteLine(getMax(arrTwo));
-            //Console.WriteLine(getMax(arrThree));
-            //Console.WriteLine(getAvg(arrfour));
-            //Console.WriteLine(getAvg(arrTwo));
-            //Console.WriteLine(getAvg(arrThree));
+            Console.WriteLine("Interating through an Array\n");
+            printAllItemsInArray(arrOne);
+            Console.WriteLine("\n***********************************\n");
+
+            Console.WriteLine("Find Max\n");
+            Console.WriteLine(getMax(arrOne));
+            Console.WriteLine(getMax(arrTwo));
+            Console.WriteLine(getMax(arrThree));
+            Console.WriteLine("\n***********************************\n");
+
+            Console.WriteLine("Find Average\n");
+            Console.WriteLine(getAvg(arrfour));
+            Console.WriteLine(getAvg(arrTwo));
+            Console.WriteLine(getAvg(arrThree));
+            Console.WriteLine("\n***********************************\n");
+
+            Console.WriteLine("Array with Odd Numbers\n");
             foreach (int i in getOddNumbers1To255())
             {
                 System.Console.WriteLine(i);
             }
 
+            Console.WriteLine("Greater than Y\n");
             foreach (int j in greaterThanY(arrOne, 5))
             {
                 System.Console.WriteLine(j);
             }
+            Console.WriteLine("\n***********************************\n");
 
-            //printAllItemsInArray(squaresAllValues(arrThree));
-            //printAllItemsInArray(squaresAllValues(arrfour));
+            Console.WriteLine("Square the Values\n");
+            printAllItemsInArray(squaresAllValues(arrThree));
+            printAllItemsInArray(squaresAllValues(arrfour));
+            Console.WriteLine("\n***********************************\n");
 
-            //printAllItemsInArray(eliminateNegativeValues(arrThree));
-            //printAllItemsInArray(eliminateNegativeValues(arrFive));
+            Console.WriteLine("Eliminate negative values\n");
+            printAllItemsInArray(eliminateNegativeValues(arrThree));
+            printAllItemsInArray(eliminateNegativeValues(arrFive));
+            Console.WriteLine("\n***********************************\n");
 
-            //getMinMaxAvg(arrFive);
+            Console.WriteLine("Min, Max, and Average");
+            getMinMaxAvg(arrFive);
+            Console.WriteLine("\n***********************************\n");
 
-            //printAllItemsInArray(shiftingValuesInArray(arrOne));
-            //printAllItemsInArray(shiftingValuesInArray(arrSix));
+            Console.WriteLine("Shifting the values in an array");
+            printAllItemsInArray(shiftingValuesInArray(arrOne));
+            printAllItemsInArray(shiftingValuesInArray(arrSix));
+            Console.WriteLine("\n***********************************\n");
+
+            Console.WriteLine("Number to String\n");
 
             foreach(var k in numToString(arrSeven))
             {
