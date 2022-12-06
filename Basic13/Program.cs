@@ -98,6 +98,16 @@ namespace Basic13
             }
             return fiterArray;
         }
+
+        static int[] squaresAllValues(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = arr[i] * arr[i];
+            }
+
+            return arr;
+        }
         public static void Main()
         {
             //print1To255();
@@ -121,9 +131,11 @@ namespace Basic13
             }
 
             foreach (int j in greaterThanY(arrOne, 5))
-                {
+            {
                 System.Console.WriteLine(j);
-                }
+            }
+
+            printAllItemsInArray(squaresAllValues(arrThree));
         }
     }
 }
