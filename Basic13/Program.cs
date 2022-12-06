@@ -40,6 +40,37 @@
             }    
         }
         
+        //Find Max
+        static int getMax(int[] arr)
+        {
+            if (arr.Length == 0)
+            {
+                return 0;
+            }
+
+            int max = arr[0];
+
+            for (int m = 1; m < arr.Length; m++)
+            {
+                if (arr[m] > max)
+                {
+                    max = arr[m];
+                }
+            }
+
+            return max;
+        }
+
+        static double getAvg(int[] arr)
+        {
+            double sum = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i];
+            }
+
+            return Math.Round(sum / arr.Length, 2);
+        }
         public static void Main()
         {
             //print1To255();
@@ -47,7 +78,16 @@
             //printSum();
 
             int[] arrOne = { 1, 3, 5, 7, 9, 13 };
-            printAllItemsInArray(arrOne);
+            int[] arrTwo = { -3, -5, -7 };
+            int[] arrThree = { 2, 9, -3, 4, -5 };
+            int[] arrfour = { 2, 10, 3 };
+            //printAllItemsInArray(arrOne);
+            //Console.WriteLine(getMax(arrOne));
+            //Console.WriteLine(getMax(arrTwo));
+            //Console.WriteLine(getMax(arrThree));
+            Console.WriteLine(getAvg(arrfour));
+            Console.WriteLine(getAvg(arrTwo));
+            Console.WriteLine(getAvg(arrThree));
         }
     }
 }
