@@ -108,6 +108,19 @@ namespace Basic13
 
             return arr;
         }
+
+        static int[] eliminateNegativeValues(int[] nums)
+        {
+            for (int x = 0; x < nums.Length; x++)
+            {
+                if (nums[x] < 0)
+                {
+                    nums[x] = 0;
+                }
+            }
+
+            return nums;
+        }
         public static void Main()
         {
             //print1To255();
@@ -118,6 +131,7 @@ namespace Basic13
             int[] arrTwo = { -3, -5, -7 };
             int[] arrThree = { 2, 9, -3, 4, -5 };
             int[] arrfour = { 2, 10, 3 };
+            int[] arrFive = { 1, 5, 10, -4 };
             //printAllItemsInArray(arrOne);
             //Console.WriteLine(getMax(arrOne));
             //Console.WriteLine(getMax(arrTwo));
@@ -135,7 +149,12 @@ namespace Basic13
                 System.Console.WriteLine(j);
             }
 
-            printAllItemsInArray(squaresAllValues(arrThree));
+            //printAllItemsInArray(squaresAllValues(arrThree));
+            //printAllItemsInArray(squaresAllValues(arrfour));
+
+            printAllItemsInArray(eliminateNegativeValues(arrThree));
+            printAllItemsInArray(eliminateNegativeValues(arrFive));
+
         }
     }
 }
