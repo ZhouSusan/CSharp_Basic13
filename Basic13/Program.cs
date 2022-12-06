@@ -140,6 +140,20 @@ namespace Basic13
             Console.WriteLine("$Min: {0}, Max: {1}, Average: {2}\n", min, getMax(nums), getAvg(nums));
 
         }
+
+        static int[] shiftingValuesInArray(int[] arr)
+        {
+            int s = 0;
+
+
+            for (int r = 1; r < arr.Length; r++)
+            {
+                arr[s] = arr[r];
+                s++;
+            }
+            arr[arr.Length - 1] = 0;
+            return arr;
+        } 
         public static void Main()
         {
             //print1To255();
@@ -151,6 +165,7 @@ namespace Basic13
             int[] arrThree = { 2, 9, -3, 4, -5 };
             int[] arrfour = { 2, 10, 3 };
             int[] arrFive = { 1, 5, 10, -4 };
+            int[] arrSix = { 1, 5, 10, -7, -2 };
             //printAllItemsInArray(arrOne);
             //Console.WriteLine(getMax(arrOne));
             //Console.WriteLine(getMax(arrTwo));
@@ -174,7 +189,10 @@ namespace Basic13
             //printAllItemsInArray(eliminateNegativeValues(arrThree));
             //printAllItemsInArray(eliminateNegativeValues(arrFive));
 
-            getMinMaxAvg(arrFive);
+            //getMinMaxAvg(arrFive);
+
+            printAllItemsInArray(shiftingValuesInArray(arrOne));
+            printAllItemsInArray(shiftingValuesInArray(arrSix));
         }
     }
 }
