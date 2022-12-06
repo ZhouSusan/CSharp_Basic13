@@ -154,6 +154,23 @@ namespace Basic13
             arr[arr.Length - 1] = 0;
             return arr;
         } 
+
+        static ArrayList numToString(int[] numsArr)
+        {
+            ArrayList numString = new ArrayList();
+            for (int n = 0; n < numsArr.Length; n++)
+            {
+                if (numsArr[n] < 0)
+                {
+                    numString.Add("Dojo");
+                } else
+                {
+                    numString.Add(numsArr[n]);
+                }
+            }
+
+            return numString;
+        }
         public static void Main()
         {
             //print1To255();
@@ -166,6 +183,8 @@ namespace Basic13
             int[] arrfour = { 2, 10, 3 };
             int[] arrFive = { 1, 5, 10, -4 };
             int[] arrSix = { 1, 5, 10, -7, -2 };
+            int[] arrSeven = { -1, -3, 2 };
+
             //printAllItemsInArray(arrOne);
             //Console.WriteLine(getMax(arrOne));
             //Console.WriteLine(getMax(arrTwo));
@@ -191,8 +210,18 @@ namespace Basic13
 
             //getMinMaxAvg(arrFive);
 
-            printAllItemsInArray(shiftingValuesInArray(arrOne));
-            printAllItemsInArray(shiftingValuesInArray(arrSix));
+            //printAllItemsInArray(shiftingValuesInArray(arrOne));
+            //printAllItemsInArray(shiftingValuesInArray(arrSix));
+
+            foreach(var k in numToString(arrSeven))
+            {
+                Console.WriteLine(k);
+            }
+
+            foreach(var h in numToString(arrTwo))
+            {
+                Console.WriteLine(h);
+            }
         }
     }
 }
